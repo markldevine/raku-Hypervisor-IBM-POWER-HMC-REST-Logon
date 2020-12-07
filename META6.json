@@ -1,26 +1,26 @@
 {
-  "auth":           "github:markldevine",
-  "authors":        [ "Mark Devine <mark@markdevine.com>" ],
-  "depends":        [
-    "HTTP::UserAgent",
-    "Hypervisor::IBM::POWER::HMC::REST::ETL",
-    "KHPH",
-    "OO::Monitors",
-    "URI",
-  ],
-  "description":    "IBM POWER HMC REST API - Logon",
-  "license":        "Artistic-2.0",
-  "meta-version":   0,
-  "name":           "Hypervisor::IBM::POWER::HMC::REST::Logon",
-  "perl":           "6.*",
-  "provides":       {
-    "Hypervisor::IBM::POWER::HMC::REST::Logon::X-API-Session": "lib/Hypervisor/IBM/POWER/HMC/REST/Logon/X-API-Session.rakumod",
-  },
-  "resources":      [],
-  "source-url":     "https://github.com/markldevine/raku-Hypervisor-IBM-POWER-HMC-REST-Logon.git",
-  "tags":           [
-    "HMC",
-    "REST"
-  ],
-  "version":        "0.0.1"
+    "auth":         "github:markldevine",
+    "authors":      [ "Mark Devine <mark@markdevine.com>" ],
+    "depends":      [
+        "HTTP::UserAgent",
+        "Hypervisor::IBM::POWER::HMC::REST::ETL",
+        "KHPH",
+        "OO::Monitors",
+        "URI"
+    ],
+    "description":  "IBM POWER HMC REST API - Logon",
+    "license":      "Artistic-2.0",
+    "meta-version": 0,
+    "name":         "Hypervisor::IBM::POWER::HMC::REST::Logon",
+    "perl":         "6.*",
+    "provides":     {
+        "Hypervisor::IBM::POWER::HMC::REST::Logon::X-API-Session": "lib/Hypervisor/IBM/POWER/HMC/REST/Logon/X-API-Session.rakumod"
+    },
+    "resources":    [],
+    "source-url":   "https://github.com/markldevine/raku-Hypervisor-IBM-POWER-HMC-REST-Logon.git",
+    "tags":         [
+        "HMC",
+        "REST"
+    ],
+    "version":      "0.0.1"
 }
