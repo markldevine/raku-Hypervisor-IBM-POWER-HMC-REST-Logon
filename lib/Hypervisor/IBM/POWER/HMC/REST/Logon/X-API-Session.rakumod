@@ -104,7 +104,6 @@ method !PUT () {
     my $response = $!ua.request(PUT $uri, :$content, |%header);
     given $response.code {
         when 200 {
-warn 'new self.etl-parse-string';
             self.etl-parse-string(:xml-string($response.content));
             die unless $!X-API-Session = self.etl-text(:TAG<X-API-Session>);
             $ = KHPH.new(
