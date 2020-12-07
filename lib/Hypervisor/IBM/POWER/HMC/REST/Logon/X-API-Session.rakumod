@@ -105,7 +105,7 @@ method !PUT () {
     given $response.code {
         when 200 {
             self.etl-parse-string(:xml-string($response.content));
-            die unless $!X-API-Session = self.etl-text(:TAG<X-API-Session>);
+            die unless $!X-API-Session = self.etl-text(:TAG<X-API-Session>, :$!xml);
             $ = KHPH.new(
                 :secret($!X-API-Session),
                 :stash-path(self!session-token-stash-path),
