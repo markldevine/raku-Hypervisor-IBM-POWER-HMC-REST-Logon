@@ -26,9 +26,11 @@ class Cache-Endpoint {
     has Bool    $.valid is rw;
 }
 
-method fetch (Str:D $uri-segments-str, Bool :$retry = True, Bool :$optional --> Str:D) {
+method fetch (Str:D $uri-segments-str, Bool :$retry = True, Bool :$force-cache, Bool :$optional --> Str:D) {
+    my $use-cache   = self.cache;
+    $use-cache      = True if $force-cache;
     my $cache-entry = self!get-cache-entry($uri-segments-str);
-    return $cache-entry.xml-path if self.cache && $cache-entry.valid;
+    return $cache-entry.xml-path if $use-cache && $cache-entry.valid;
     self.init unless $!ua.DEFINITE;
     my %headers;
     %headers<X-API-Session> = self.X-API-Session;
